@@ -1,4 +1,4 @@
-package com.gepe.springcore;
+package com.gepe.springcore.common;
 
 import org.springframework.stereotype.Component;
 
