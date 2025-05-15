@@ -7,11 +7,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DemoController {
-    private final Coach myCoach;
+    private Coach myCoach;
 
+//    @Autowired
+//    public DemoController(Coach myCoach){ // constructor injection
+//        this.myCoach = myCoach;
+//    }
+
+    // setter injection, we can use any name.
+    // not only setMyCoach like setter used to be.
     @Autowired
-    public DemoController(Coach myCoach){
-        this.myCoach = myCoach;
+    public void injectSomeStuff(Coach myCoach){
+        this.myCoach =  myCoach;
     }
 
     @GetMapping("/dailyworkout")
